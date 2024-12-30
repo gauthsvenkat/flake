@@ -52,6 +52,7 @@
       "networkmanager"
       "wheel"
     ];
+    shell = pkgs.zsh;
   };
 
   i18n = {
