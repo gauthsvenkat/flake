@@ -52,10 +52,6 @@
       "networkmanager"
       "wheel"
     ];
-    packages = with pkgs; [
-      git
-      firefox
-    ];
   };
 
   i18n = {
