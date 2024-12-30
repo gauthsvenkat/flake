@@ -20,6 +20,7 @@ in
       rustup
       cargo-generate
       nixfmt-rfc-style
+      pre-commit
       just
       ttyper
     ];
@@ -35,6 +36,8 @@ in
     direnv.enable = true;
     yazi.enable = true;
     nh.enable = true;
+    firefox.enable = true;
+    wezterm.enable = true;
 
     zoxide = {
       enable = true;
