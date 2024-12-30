@@ -21,10 +21,16 @@
   security.rtkit.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  environment.systemPackages = with pkgs; [
-    neovim
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      neovim
+    ];
+    variables = {
+      EDITOR = "nvim";
+    };
+  };
 
   services = {
     xserver.enable = true;
@@ -51,7 +57,6 @@
       firefox
     ];
   };
-
 
   i18n = {
     defaultLocale = "en_US.UTF-8";
