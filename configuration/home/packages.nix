@@ -15,7 +15,6 @@ with pkgs;
   pre-commit
   just
   ttyper
-  mullvad-vpn
   # wezterm mentioned as a package and not enabled in programs
   # because it'll try to create a config in ~/.config/wezterm
   wezterm
