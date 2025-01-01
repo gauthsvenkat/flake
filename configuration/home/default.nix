@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 let
   username = "ando";
   homeDirectory = "/home/${username}";
@@ -11,13 +12,13 @@ in
         stateVersion = "24.11"; # Don't change this
         inherit username;
         inherit homeDirectory;
-        packages = import ./packages.nix;
+        packages = import ./packages.nix { inherit pkgs; };
       };
 
       targets.genericLinux.enable = true;
       fonts.fontconfig.enable = true;
 
-      programs = import ./programs.nix;
+      programs = import ./programs.nix { inherit pkgs; };
     };
   };
 }
