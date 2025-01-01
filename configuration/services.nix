@@ -5,7 +5,6 @@
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
     openssh.enable = true;
-    mullvad-vpn.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
