@@ -6,6 +6,11 @@
     displayManager.sddm.enable = true;
     desktopManager.plasma6.enable = true;
     openssh.enable = true;
+    syncthing = {
+      enable = true;
+      user = "ando";
+      dataDir = "/home/ando";
+    };
     mullvad-vpn = {
       enable = true;
       # pkgs.mullvad only contains the cli
@@ -19,7 +24,7 @@
       pulse.enable = true;
     };
     kanata = {
-      enable = true;
+      enable = false;
       keyboards.laptop = {
         devices = [
           "/dev/input/by-path/platform-i8042-serio-0-event-kbd"
