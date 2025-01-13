@@ -20,4 +20,5 @@ with pkgs;
   wezterm
   spotify
   jellyfin-media-player
+  neovide
 ]
