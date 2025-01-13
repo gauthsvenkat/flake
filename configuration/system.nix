@@ -12,6 +12,7 @@
     systemPackages = with pkgs; [
       neovim
       wl-clipboard
+      wireguard-tools
     ];
     variables = {
       EDITOR = "nvim";
