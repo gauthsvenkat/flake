@@ -21,4 +21,5 @@ with pkgs;
   spotify
   jellyfin-media-player
   neovide
+  kdePackages.yakuake
 ]
