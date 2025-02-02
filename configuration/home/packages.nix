@@ -21,5 +21,6 @@ with pkgs;
   spotify
   jellyfin-media-player
   neovide
-  vlc
+  mpv
+  rustdesk
 ]
