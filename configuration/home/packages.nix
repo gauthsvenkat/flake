@@ -23,4 +23,5 @@ with pkgs;
   neovide
   mpv
   rustdesk
+  kdePackages.krdc
 ]
