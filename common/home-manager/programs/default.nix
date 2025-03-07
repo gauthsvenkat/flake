@@ -31,4 +31,6 @@
   };
 
   zsh = import ./zsh.nix { inherit pkgs; };
+
+  wezterm = import ./wezterm.nix { inherit pkgs; };
 }
