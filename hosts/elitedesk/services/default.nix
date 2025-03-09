@@ -4,7 +4,7 @@
   imports = [ inputs.agenix.nixosModules.default ];
 
   age.secrets = {
-    ".env".file = ./.env;
+    ".env".file = ../.env;
   };
 
   virtualisation.oci-containers.backend = "docker";
