@@ -1,0 +1,16 @@
+# NOTE: Don't forget to copy .env secrets right next this file.
+include:
+  - bazarr.yaml
+  - dozzle.yaml
+  - flaresolverr.yaml
+  - gluetun.yaml
+  - homarr.yaml
+  - immich.yaml
+  - jellyfin.yaml
+  - paperless-ngx.yaml
+  - prowlarr.yaml
+  - qbittorrent.yaml
+  - radarr.yaml
+  - sabnzbd.yaml
+  - sonarr.yaml
+  - stirling-pdf.yaml
