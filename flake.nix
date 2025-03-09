@@ -18,7 +18,7 @@
   };
 
   outputs =
-    { nixpkgs, ... }@inputs:
+    { nixpkgs, home-manager, ... }@inputs:
     let
       mkNixosSystem =
         hostname: system: username:
@@ -36,6 +36,15 @@
         xps = mkNixosSystem "xps" "x86_64-linux" "gautham";
         elitedesk = mkNixosSystem "elitedesk" "x86_64-linux" "ando";
         nixpi = mkNixosSystem "nixpi" "aarch64-linux" "ando";
+      };
+
+      /* NOTE: raspi5 is maintained separately as there isn't an easy way to install
+        NixOS on it. So we only have a home-manager configuration. */
+      homeConfigurations."ando" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages."aarch64-linux";
+        modules = [
+          ./hosts/raspi5
+        ];
       };
     };
 }

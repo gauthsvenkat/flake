@@ -1,15 +1,13 @@
 {
-  username,
-  ...
-}:
-{
   imports = [ ./zsh.nix ];
 
-  home-manager.users.${username}.programs = {
+  programs = {
+    home-manager.enable = true;
     fastfetch.enable = true;
     eza.enable = true;
     fzf.enable = true;
     bat.enable = true;
+    ripgrep.enable = true;
     lazygit.enable = true;
     direnv.enable = true;
     nh.enable = true;
@@ -24,6 +22,7 @@
     git = {
       enable = true;
       lfs.enable = true;
+      userEmail = "gauthsvenkat@gmail.com";
       userName = "Gautham Venkataraman";
     };
 
