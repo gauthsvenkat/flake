@@ -24,7 +24,7 @@
       slack
       k9s
       google-cloud-sdk
-      helm
+      kubernetes-helm
     ];
     programs.git.userEmail = "gautham@dexterenergy.ai";
   };
