@@ -1,4 +1,4 @@
-{ username, ... }:
+{ pkgs, username, ... }:
 {
   imports = [
     ./disko-config.nix
@@ -13,7 +13,19 @@
     ../../common/home-manager/development.nix
   ];
 
-  home-manager.users.${username}.programs.git = {
-    userEmail = "gautham@dexterenergy.ai";
+  services.fprintd.tod = {
+    enable = true;
+    driver = pkgs.libfprint-2-tod1-goodix;
+  };
+
+  home-manager.users.${username} = {
+    home.packages = with pkgs; [
+      _1password-gui
+      slack
+      k9s
+      google-cloud-sdk
+      helm
+    ];
+    programs.git.userEmail = "gautham@dexterenergy.ai";
   };
 }
