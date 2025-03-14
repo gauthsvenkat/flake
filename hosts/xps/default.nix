@@ -22,8 +22,11 @@
     home.packages = with pkgs; [
       _1password-gui
       slack
+      (google-cloud-sdk.withExtraComponents [
+        google-cloud-sdk.components.gke-gcloud-auth-plugin
+        google-cloud-sdk.components.kubectl
+      ])
       k9s
-      google-cloud-sdk
       kubernetes-helm
       thunderbird
       libreoffice-still
