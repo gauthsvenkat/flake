@@ -25,6 +25,8 @@
       k9s
       google-cloud-sdk
       kubernetes-helm
+      thunderbird
+      libreoffice-still
     ];
     programs.git.userEmail = "gautham@dexterenergy.ai";
   };
