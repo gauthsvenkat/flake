@@ -18,9 +18,13 @@
     driver = pkgs.libfprint-2-tod1-goodix;
   };
 
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ username ];
+  };
+
   home-manager.users.${username} = {
     home.packages = with pkgs; [
-      _1password-gui
       slack
       (google-cloud-sdk.withExtraComponents [
         google-cloud-sdk.components.gke-gcloud-auth-plugin
