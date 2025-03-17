@@ -20,7 +20,7 @@
       return {
         audible_bell = "Disabled",
 
-        font_size = 10,
+        font_size = 12,
 
         enable_wayland = false,
         front_end = "WebGpu", -- Doesn't work on thinkpad without this
