@@ -13,4 +13,5 @@ include:
   - radarr.yaml
   - sabnzbd.yaml
   - sonarr.yaml
+  - speedtest-tracker.yaml
   - stirling-pdf.yaml
