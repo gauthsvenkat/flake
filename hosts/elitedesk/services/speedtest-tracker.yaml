@@ -13,5 +13,6 @@ services:
       PGID: ${PGID}
       TZ: ${TZ}
       APP_KEY: ${SPEEDTEST_TRACKER_APP_KEY}
+      SPEEDTEST_SCHEDULE: 18 */2 * * *
     volumes:
       - ${CONFIG_DIR}/speedtest-tracker:/config
