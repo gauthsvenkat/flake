@@ -1,25 +1,25 @@
 {
   username,
-  inputs,
   ...
 }:
 {
   imports = [
-    "${inputs.nixpkgs}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
+    ./hardware-configuration.nix
     ../../common/nix-settings.nix
     ../../common/system.nix
     ../../common/users.nix
     ../../common/home-manager
     ../../common/ssh.nix
     ../../common/adguardhome.nix
-    ./wg-easy.nix
   ];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/NIXOS_SD";
-    fsType = "ext4";
-    options = [ "noatime" ];
+  boot.loader.grub = {
+    enable = true;
+    device = "/dev/sda";
+    useOSProber = true;
   };
+
+  services.logind.lidSwitchExternalPower = "ignore";
 
   home-manager.users.${username}.programs.git = {
     userEmail = "gauthsvenkat@gmail.com";
