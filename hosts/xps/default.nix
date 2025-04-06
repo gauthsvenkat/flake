@@ -28,19 +28,26 @@
   };
 
   home-manager.users.${username} = {
-    home.packages = with pkgs; [
-      slack
-      (google-cloud-sdk.withExtraComponents [
-        google-cloud-sdk.components.gke-gcloud-auth-plugin
-        google-cloud-sdk.components.kubectl
-      ])
-      k9s
-      kubernetes-helm
-      thunderbird
-      libreoffice-still
-      hurl
-      jq
-    ];
+    home = {
+      packages = with pkgs; [
+        slack
+        (google-cloud-sdk.withExtraComponents [
+          google-cloud-sdk.components.gke-gcloud-auth-plugin
+          google-cloud-sdk.components.kubectl
+        ])
+        k9s
+        kubernetes-helm
+        thunderbird
+        libreoffice-still
+        hurl
+        jq
+        pkg-config
+      ];
+      sessionVariables = {
+        # Needed for compiling rust apps that depend on openssl
+        PKG_CONFIG_PATH = "${pkgs.openssl.dev}/lib/pkgconfig";
+      };
+    };
 
     programs.git.userEmail = "gautham@dexterenergy.ai";
 
