@@ -4,19 +4,21 @@
 }:
 {
   imports = [
-    # TODO: Disko?
     ./hardware-configuration.nix
     ../../common/boot.nix
     ../../common/nix-settings.nix
     ../../common/system.nix
     ../../common/users.nix
     ../../common/gui.nix
-    ../../common/kanata.nix
-    ../../common/laptop.nix
     ../../common/mullvad-vpn.nix
     ../../common/home-manager/personal.nix
     ../../common/home-manager/development.nix
   ];
+
+  # services.xserver = {
+  #   enable = true;
+  #   videoDrivers = [ "nvidia" ];
+  # };
 
   home-manager.users.${username}.programs.git = {
     userEmail = "gauthsvenkat@gmail.com";
