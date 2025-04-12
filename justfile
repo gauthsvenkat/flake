@@ -4,7 +4,6 @@ apply action='switch':
 update:
   nix flake update
 
-# Make sure to run the update recipe before this one
 upgrade:
   just apply boot
 
