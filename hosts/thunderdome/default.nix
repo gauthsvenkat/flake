@@ -1,5 +1,6 @@
 {
   username,
+  pkgs,
   ...
 }:
 let
@@ -35,10 +36,22 @@ in
     nvidia = {
       open = false;
       modesetting.enable = true;
+      powerManagement.enable = true;
     };
   };
 
-  programs.steam.enable = true;
+  programs = {
+    steam.enable = true;
+    gamemode.enable = true;
+  };
 
-  home-manager.users.${username}.programs.git.userEmail = "gauthsvenkat@gmail.com";
+  users.users.${username}.extraGroups = [ "gamemode" ];
+
+  home-manager.users.${username} = {
+    programs.git.userEmail = "gauthsvenkat@gmail.com";
+
+    xdg.autostart.entries = [
+      "${pkgs.steam}/share/applications/steam.desktop"
+    ];
+  };
 }
