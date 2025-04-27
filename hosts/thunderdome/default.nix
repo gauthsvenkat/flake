@@ -48,6 +48,9 @@ in
   users.users.${username}.extraGroups = [ "gamemode" ];
 
   home-manager.users.${username} = {
+    home.packages = with pkgs; [
+      heroic
+    ];
     programs.git.userEmail = "gauthsvenkat@gmail.com";
 
     xdg.autostart.entries = [
