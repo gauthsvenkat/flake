@@ -50,6 +50,7 @@ in
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       heroic
+      bottles
     ];
     programs.git.userEmail = "gauthsvenkat@gmail.com";
 
