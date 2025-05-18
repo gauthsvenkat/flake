@@ -18,7 +18,7 @@
         (deftemplate charmod (char mod)
           (switch
             ((key-timing 3 less-than 250)) $char break
-            () (tap-hold-release-timeout 200 500 $char $mod $char) break
+            () (tap-hold-release 200 400 $char $mod) break
           )
         )
 
