@@ -35,6 +35,7 @@
           esc caps
 
           lsft (tap-hold-press $tap-timeout $hold-timeout (caps-word-toggle $caps-word-timeout) lsft)
+          rsft (tap-hold-press $tap-timeout $hold-timeout f12 rsft)
 
           a (t! charmod a lmet)
           s (t! charmod s lalt)
