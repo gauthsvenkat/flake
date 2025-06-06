@@ -17,11 +17,9 @@
       nodejs
       git
       gcc
-      cmake
       ripgrep
       fd
       wl-clipboard-rs
-      nixfmt-rfc-style
     ];
 
     programs = {
