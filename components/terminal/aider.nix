@@ -9,6 +9,9 @@
       sessionVariables.AIDER_VIM = "true";
     };
 
-    programs.zsh.shellAliases."ai" = "${pkgs.aider-chat}/bin/aider";
+    programs = {
+      zsh.shellAliases."ai" = "${pkgs.aider-chat}/bin/aider";
+      git.ignores = [".aider*"];
+    };
   };
 }
