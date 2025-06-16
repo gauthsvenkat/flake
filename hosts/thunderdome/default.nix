@@ -12,7 +12,6 @@ in {
     ../../components/services/sanoid.nix
     ../../components/services/zfs.nix
 
-    ../../components/terminal/aider.nix
     ../../components/extra/gaming.nix
   ];
 
