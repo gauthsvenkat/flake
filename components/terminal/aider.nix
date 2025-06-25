@@ -5,7 +5,7 @@
 }: {
   home-manager.users.${username} = {
     home = {
-      packages = [pkgs.aider-chat-with-playwright];
+      packages = [pkgs.aider-chat];
       sessionVariables.AIDER_VIM = "true";
     };
 
