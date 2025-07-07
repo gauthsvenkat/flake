@@ -20,6 +20,8 @@
         ".env"
         "codecompanion-workspace.json"
         "private_key"
+        ".claude/"
+        "CLAUDE.md"
       ];
     };
     zsh.oh-my-zsh.plugins = ["git"];
