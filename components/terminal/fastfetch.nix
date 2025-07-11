@@ -127,18 +127,15 @@ in {
             key = " Battery";
             keyColor = "bright_magenta";
           }
-
-          "break"
-
-          {
-            type = "colors";
-            symbol = "circle";
-            paddingLeft = 2;
-          }
         ];
       };
     };
 
-    zsh.initContent = "${pkgs.fastfetch}/bin/fastfetch";
+    zsh = let
+      fastfetch = "${pkgs.fastfetch}/bin/fastfetch";
+    in {
+      initContent = fastfetch;
+      shellAliases."ff" = fastfetch;
+    };
   };
 }
