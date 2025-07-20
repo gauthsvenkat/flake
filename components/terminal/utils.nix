@@ -8,6 +8,7 @@ in {
   home-manager.users.${username}.home.packages = with pkgs; [
     curl
     fd
+    gnumake
     jq
     just
     ripgrep
