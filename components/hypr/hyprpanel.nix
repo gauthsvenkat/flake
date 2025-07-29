@@ -43,19 +43,19 @@ in {
               tooltip = "Firefox";
             };
             shortcut2 = {
-              tooltip = "";
-              command = "";
               icon = "";
+              command = "";
+              tooltip = "";
             };
             shortcut3 = {
-              icon = "";
+              icon = "";
               command = "wezterm";
               tooltip = "Wezterm";
             };
             shortcut4 = {
+              icon = "󱓞";
               command = "tofi-drun --drun-launch=true";
               tooltip = "Launch";
-              icon = "";
             };
           };
           right = {
