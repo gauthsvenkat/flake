@@ -1,3 +1,7 @@
+### Bugs
+- Screensharing doesn't work on KDE when hyprland is also added.
+  - probably some shenanigans with `xdg-desktop-portal`
+
 ### General
 - nixify kde plasma (mainly for keybindings)
 - tofi for kde?
