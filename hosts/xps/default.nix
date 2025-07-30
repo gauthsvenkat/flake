@@ -9,7 +9,6 @@ in {
     ./hardware-configuration.nix
 
     ../../bases/laptop.nix
-    ../../bases/workstation-hyprland.nix
     ../../bases/workstation-kde.nix
 
     ../../components/config.nix
