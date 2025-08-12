@@ -36,6 +36,8 @@ in {
 
   users.users.${username}.home = homeDirectory;
 
+  system.primaryUser = username;
+
   fonts.packages = [pkgs.nerd-fonts.jetbrains-mono];
 
   homebrew = {
