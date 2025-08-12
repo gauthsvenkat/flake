@@ -52,4 +52,6 @@ in {
 
     programs.zsh.shellAliases."o" = "open";
   };
+
+  system.stateVersion = 6;
 }
