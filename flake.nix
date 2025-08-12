@@ -58,8 +58,11 @@
 
     darwinConfigurations.macbook-m1-pro = nix-darwin.lib.darwinSystem {
       specialArgs = {inherit inputs;};
-      #TODO: Darwin config
-      modules = [{nixpkgs.hostPlatform = "aarch64-darwin";} inputs.home-manager-darwin.darwinModules.home-manager];
+      modules = [
+        {nixpkgs.hostPlatform = "aarch64-darwin";}
+        inputs.home-manager-darwin.darwinModules.home-manager
+        ./hosts/macbook-m1-pro
+      ];
     };
   };
 }
