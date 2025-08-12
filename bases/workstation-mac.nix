@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  inherit (config.hostCfg) username;
+  inherit (config.hostCfg) username homeDirectory;
 in {
   imports = [
     ../components/system/home-manager.nix
@@ -33,6 +33,8 @@ in {
 
     ../components/wallpaper
   ];
+
+  users.users.${username}.home = homeDirectory;
 
   fonts.packages = [pkgs.nerd-fonts.jetbrains-mono];
 
