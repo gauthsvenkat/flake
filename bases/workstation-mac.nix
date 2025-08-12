@@ -44,7 +44,6 @@ in {
   # section handles that.
   nix-homebrew = {
     enable = true;
-    enableRosetta = true;
     user = username;
   };
 
