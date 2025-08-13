@@ -14,16 +14,16 @@ in {
     ${builtins.readFile ../../notnix/configs/kanata.kbd}
   '';
 
-  launchd.daemons.kanata = {
-    script = ''
-      exec /opt/homebrew/bin/kanata --cfg /Users/${username}/.config/kanata/kanata.kbd
-    '';
-    serviceConfig = {
-      Label = "org.homebrew.kanata";
-      KeepAlive = true;
-      RunAtLoad = true;
-      StandardErrorPath = "/var/log/kanata.log";
-      StandardOutPath = "/var/log/kanata.log";
-    };
+  launchd.daemons.kanata.serviceConfig = {
+    Label = "com.homebrew.kanata";
+    ProgramArguments = [
+      "/opt/homebrew/bin/kanata"
+      "--cfg"
+      "/Users/${username}/.config/kanata/kanata.kbd"
+    ];
+    KeepAlive = true;
+    RunAtLoad = true;
+    StandardErrorPath = "/var/log/kanata.log";
+    StandardOutPath = "/var/log/kanata.log";
   };
 }
