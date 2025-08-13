@@ -9,6 +9,7 @@ in {
   home-manager.users.${username}.home.file.".config/kanata/kanata.kbd".text = ''
     ${builtins.readFile ../../notnix/configs/kanata/0.kanata.darwin.kbd}
     ${builtins.readFile ../../notnix/configs/kanata/1.kanata.shared.kbd}
+    ${builtins.readFile ../../notnix/configs/kanata/2.kanata.darwin.kbd}
   '';
 
   launchd.daemons.kanata.serviceConfig = {
