@@ -8,7 +8,7 @@ in {
 
   home-manager.users.${username}.home.file.".config/kanata/kanata.kbd".text = ''
     (defcfg
-      process-unmapped-keys yes
+      process-unmapped-keys (all-except f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12)
     )
 
     ${builtins.readFile ../../notnix/configs/kanata.kbd}
