@@ -15,7 +15,9 @@ in {
   '';
 
   launchd.daemons.kanata = {
-    command = "/opt/homebrew/bin/kanata --cfg /Users/${username}/.config/kanata/kanata.kbd";
+    script = ''
+      exec /opt/homebrew/bin/kanata --cfg /Users/${username}/.config/kanata/kanata.kbd
+    '';
     serviceConfig = {
       Label = "org.homebrew.kanata";
       KeepAlive = true;
