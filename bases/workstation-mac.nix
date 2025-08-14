@@ -48,6 +48,8 @@ in {
       "libreoffice-still"
       "firefox"
       "visual-studio-code"
+      "alt-tab"
+      "rectangle"
     ];
   };
 

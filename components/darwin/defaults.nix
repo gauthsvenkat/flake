@@ -16,14 +16,6 @@
       minimize-to-application = true;
       autohide = true;
       autohide-delay = 0.0;
-      persistent-apps = [
-        "/Applications/WezTerm.app"
-        "/Applications/Slack.app"
-        "/Applications/Firefox.app"
-        "/Applications/Thunderbird.app"
-        "/Applications/1Password.app"
-        "/Applications/Visual Studio Code.app"
-      ];
     };
 
     finder = {
