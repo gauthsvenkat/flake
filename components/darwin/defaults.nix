@@ -16,6 +16,7 @@
       minimize-to-application = true;
       autohide = true;
       autohide-delay = 0.0;
+      expose-animation-duration = 0.1;
     };
 
     finder = {
