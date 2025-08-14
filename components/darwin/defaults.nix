@@ -9,7 +9,6 @@
       AppleTemperatureUnit = "Celsius";
       AppleShowAllExtensions = true;
       AppleSpacesSwitchOnActivate = false;
-      "com.apple.mouse.tapBehavior" = 1;
     };
 
     dock = {
@@ -18,19 +17,12 @@
       autohide = true;
       autohide-delay = 0.0;
       persistent-apps = [
-        "/System/Applications/Finder.app"
         "/Applications/WezTerm.app"
         "/Applications/Slack.app"
         "/Applications/Firefox.app"
         "/Applications/Thunderbird.app"
         "/Applications/1Password.app"
-        # "/Applications/Spotify.app"  # not installed yet
         "/Applications/Visual Studio Code.app"
-      ];
-      persistent-others = [
-        "~" # Home folder
-        "~/Downloads" # Downloads folder
-        "~/.Trash" # Trash
       ];
     };
 
@@ -48,16 +40,5 @@
     };
 
     spaces.spans-displays = true;
-
-    trackpad = {
-      Clicking = true;
-      TrackpadRightClick = true;
-    };
-
-    WindowManager = {
-      EnableTilingByEdgeDrag = true;
-      EnableTopTilingByEdgeDrag = true;
-      EnableTilingOptionAccelerator = true;
-    };
   };
 }
