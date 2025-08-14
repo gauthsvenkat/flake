@@ -7,7 +7,7 @@
       AppleMeasurementUnits = "Centimeters";
       AppleMetricUnits = 1;
       AppleTemperatureUnit = "Celsius";
-      AppleShowAllExtensions = true;
+      AppleShowAllExtensions = false;
       AppleSpacesSwitchOnActivate = false;
     };
 
