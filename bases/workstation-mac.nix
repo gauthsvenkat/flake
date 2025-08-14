@@ -11,6 +11,7 @@ in {
     ../components/darwin/kanata.nix
     ../components/darwin/misc.nix
     ../components/darwin/wezterm.nix
+    ../components/darwin/defaults.nix
 
     inputs.home-manager-darwin.darwinModules.home-manager
     ../components/system/home-manager.nix
