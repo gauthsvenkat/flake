@@ -6,7 +6,8 @@ in {
     user = "gauthsvenkat";
     # TODO: Consider adding the passkey
     extraArgs = [
-      "--machine-name ${username}@${hostname}"
+      "--machine-name"
+      "${username}@${hostname}"
     ];
   };
 }
