@@ -8,6 +8,9 @@
 - use pkgs.lib.getExe?
 - pre-commit formatters
 
+### darwin
+- Figure out how to use nixpkgs in mac with spotlight. See https://github.com/nix-darwin/nix-darwin/pull/1396#issuecomment-3150075769
+
 ### Hyprland tasks
 - screenshotting
 - clipboard manager
