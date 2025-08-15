@@ -10,6 +10,6 @@
 
     inputs.home-manager-nixos.nixosModules.home-manager
 
-    ../system.nix
+    ../common/system.nix
   ];
 }
