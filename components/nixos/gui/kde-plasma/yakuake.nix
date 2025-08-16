@@ -17,12 +17,12 @@ in
         Window.KeepOpen = false;
 
         Shortcuts = {
-          new-session = "Alt+T";
-          next-session = "Alt+N";
-          next-terminal = "Alt+L";
-          previous-session = "Alt+B";
-          previous-terminal = "Alt+H";
-          split-left-right = "Alt+V";
+          new-session = "Ctrl+Alt+T";
+          next-session = "Ctrl+Alt+N";
+          next-terminal = "Ctrl+Alt+L";
+          previous-session = "Ctrl+Alt+B";
+          previous-terminal = "Ctrl+Alt+H";
+          split-left-right = "Ctrl+Alt+V";
         };
       };
 
