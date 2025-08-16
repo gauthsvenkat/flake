@@ -2,6 +2,7 @@
 
 keys:
   - &thunderdome age17fetz7rj5rkc89ts5l2qde3cpwswy5pkgs52czaykv8en5lw6cuqf3pa9s
+  - &thinkpad age1yge6gjxlqgmnzng2jeg4x3n7mafwrjlxa9xxgw5flrs97k0gwfmq8x7sy9
   - &elitedesk age1uahu5azpp836eurg3mvx5qqmnsecd0729f0jnq8zn2zchgp0a9zs79xjpt
 creation_rules:
   - path_regex: secrets.yaml
