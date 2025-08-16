@@ -74,6 +74,7 @@ This repository uses [sops-nix](https://github.com/Mic92/sops-nix) for managing 
 - [feature] nixify kde plasma using [plasma-manager](https://github.com/nix-community/plasma-manager).
 - [refactor] use xdg.configHome rather than string interpolation.
 - [fix] keybind agreement between hyprland, kde-plasma, wezterm, yakuake and neovim.
+- [feature] checkout [targets.darwin.keybindings](https://nix-community.github.io/home-manager/options.xhtml#opt-targets.darwin.keybindings) to implement sane copy paste behaviors.
 - [hyprland] setup screenshotting.
 - [hyprland] clipboard manager.
 - [hyprland] blue light filter. It works but is quite jarring.
