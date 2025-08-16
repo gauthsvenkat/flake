@@ -24,6 +24,8 @@ in
         lookAndFeel = "org.kde.breezedark.desktop";
         inherit wallpaper;
       };
+
+      configFile."plasmaparc".General.AudioFeedback = false;
     };
   };
 }
