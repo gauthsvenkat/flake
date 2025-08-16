@@ -40,6 +40,7 @@ This configuration does a lot of the heavy lifting for me but some steps need to
 
 - [feature] nixify kde plasma using [plasma-manager](https://github.com/nix-community/plasma-manager).
 - [feature] setup secret management using sops-nix or agenix.
+- [refactor] use xdg.configHome rather than string interpolation.
 - [hyprland] setup screenshotting.
 - [hyprland] clipboard manager.
 - [hyprland] blue light filter. It works but is quite jarring.
