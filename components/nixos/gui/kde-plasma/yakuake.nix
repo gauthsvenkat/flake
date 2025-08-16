@@ -10,19 +10,23 @@ in
   home-manager.users.${username} = {
     home.packages = [ pkgs.kdePackages.yakuake ];
 
-    programs.plasma.configFile."yakuakerc" = {
-      "Desktop Entry".DefaultProfile = "default.profile";
-      Dialogs.FirstRun = false;
-      Window.KeepOpen = false;
+    programs.plasma = {
+      configFile."yakuakerc" = {
+        "Desktop Entry".DefaultProfile = "default.profile";
+        Dialogs.FirstRun = false;
+        Window.KeepOpen = false;
 
-      Shortcuts = {
-        new-session = "Alt+T";
-        next-session = "Alt+N";
-        next-terminal = "Alt+L";
-        previous-session = "Alt+B";
-        previous-terminal = "Alt+H";
-        split-left-right = "Alt+V";
+        Shortcuts = {
+          new-session = "Alt+T";
+          next-session = "Alt+N";
+          next-terminal = "Alt+L";
+          previous-session = "Alt+B";
+          previous-terminal = "Alt+H";
+          split-left-right = "Alt+V";
+        };
       };
+
+      shortcuts."yakuake"."toggle-window-state" = "F12";
     };
 
     xdg.autostart.entries = [
