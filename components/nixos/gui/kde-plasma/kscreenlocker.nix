@@ -7,7 +7,7 @@ in
     appearance = {
       alwaysShowClock = true;
       showMediaControls = true;
-      wallpaperPictureOfTheDay.provider = "natgeo";
+      wallpaperPictureOfTheDay.provider = "bing";
     };
 
     autoLock = true;

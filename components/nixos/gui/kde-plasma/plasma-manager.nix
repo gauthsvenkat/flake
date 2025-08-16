@@ -9,9 +9,10 @@ in
     programs.plasma = {
       enable = true;
 
-      kwin.virtualDesktops.number = 3;
-
-      spectacle.shortcuts.captureRectangularRegion = "Print";
+      kwin.virtualDesktops = {
+        number = 6;
+        rows = 2;
+      };
 
       session = {
         general.askForConfirmationOnLogout = true;

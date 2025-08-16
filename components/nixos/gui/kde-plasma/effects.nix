@@ -10,7 +10,6 @@ in
     };
 
     dimAdminMode.enable = true;
-    dimInactive.enable = true;
     minimization.animation = "magiclamp";
     shakeCursor.enable = true;
     slideBack.enable = true;
