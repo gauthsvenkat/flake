@@ -1,6 +1,6 @@
 { config, inputs, ... }:
 let
-  inherit (config.hostCfg) username homeDirectory wallpaper;
+  inherit (config.hostCfg) username wallpaper;
 in
 {
   home-manager.users.${username} = {
@@ -22,7 +22,7 @@ in
       workspace = {
         colorScheme = "BreezeDark";
         lookAndFeel = "org.kde.breezedark.desktop";
-        wallpaper = "${homeDirectory}/Pictures/wallpapers/${wallpaper}";
+        inherit wallpaper;
       };
     };
   };
