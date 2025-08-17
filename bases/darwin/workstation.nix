@@ -36,6 +36,7 @@ in
       "libreoffice-still"
       "middleclick"
       "rectangle"
+      "spotify"
       "visual-studio-code"
     ];
   };
