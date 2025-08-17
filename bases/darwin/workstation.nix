@@ -36,6 +36,7 @@ in
       "libreoffice-still"
       "middleclick"
       "rectangle"
+      "scroll-reverser"
       "spotify"
       "visual-studio-code"
     ];
