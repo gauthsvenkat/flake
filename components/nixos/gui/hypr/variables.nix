@@ -34,8 +34,14 @@ in
 
     statusBar = mkOption {
       type = types.str;
-      default = "hyprpanel";
+      default = lib.getExe pkgs.hyprpanel;
       description = "status bar";
+    };
+
+    screenshot = mkOption {
+      type = types.str;
+      default = lib.getExe pkgs.flameshot;
+      description = "screenshot utility";
     };
   };
 }
