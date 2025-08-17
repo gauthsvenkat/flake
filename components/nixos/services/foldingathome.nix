@@ -3,16 +3,13 @@ let
   inherit (config.hostCfg) username hostname;
 in
 {
-  sops.secrets.foldingathomePasskey = { };
-
   services.foldingathome = {
     enable = true;
     user = "gauthsvenkat";
+    # TODO: Consider adding the passkey
     extraArgs = [
       "--machine-name"
       "${username}@${hostname}"
-      "--passkey"
-      "$(cat ${config.sops.secrets.foldingathomePasskey.path})"
     ];
   };
 }
