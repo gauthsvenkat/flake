@@ -1,10 +1,12 @@
 {
+  config,
   lib,
   pkgs,
   ...
 }:
 let
   inherit (lib) mkOption types;
+  inherit (config.hostCfg) homeDirectory;
 in
 {
   options.hyprCfg = {
@@ -40,8 +42,16 @@ in
 
     screenshot = mkOption {
       type = types.str;
-      default = lib.getExe pkgs.flameshot;
-      description = "screenshot utility";
+      default = ''
+        ${lib.getExe pkgs.grimblast} save area - | \
+        ${lib.getExe pkgs.satty} \
+          --filename - \
+          --initial-tool brush \
+          --early-exit \
+          --copy-command ${lib.getExe' pkgs.wl-clipboard "wl-copy"} \
+          --output-filename ${homeDirectory}/Pictures/screenshots/screenshot-$(date +%Y%m%d_%H%M%S).png
+      '';
+      description = "screenshot (with annotation)";
     };
   };
 }
