@@ -18,6 +18,16 @@ in
           url = "https://mcp.context7.com/mcp";
         };
 
+        notion = {
+          type = "http";
+          url = "https://mcp.notion.com/mcp";
+        };
+
+        atlasian = {
+          type = "sse";
+          url = "https://mcp.atlassian.com/v1/sse";
+        };
+
         memory = {
           type = "stdio";
           command = "${pkgs.writeShellScript "run-memory-server" ''
