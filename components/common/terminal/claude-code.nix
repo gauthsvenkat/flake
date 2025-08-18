@@ -1,17 +1,38 @@
 {
   config,
-  pkgs,
   ...
 }:
 let
-  inherit (config.hostCfg) username;
+  inherit (config.hostCfg) username homeDirectory;
 in
 {
   home-manager.users.${username} = {
-    home = {
-      packages = [ pkgs.claude-code ];
-      sessionVariables.DISABLE_TELEMETRY = 1;
+
+    programs.claude-code = {
+      enable = true;
+
+      mcpServers = {
+        context7 = {
+          type = "http";
+          url = "https://mcp.context7.com/mcp";
+        };
+      };
+
+      settings = {
+        theme = "dark";
+
+        includeCoAuthoredBy = false;
+
+        permissions = {
+          deny = [
+            "Read(./.env*)"
+            "Read(${homeDirectory}/.ssh/*)"
+          ];
+        };
+      };
     };
+
+    home.sessionVariables.DISABLE_TELEMETRY = 1;
 
     programs.git.ignores = [
       ".claude/"
