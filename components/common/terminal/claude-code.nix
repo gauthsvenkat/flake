@@ -1,5 +1,6 @@
 {
   config,
+  pkgs,
   ...
 }:
 let
@@ -16,14 +17,25 @@ in
           type = "http";
           url = "https://mcp.context7.com/mcp";
         };
+
+        memory = {
+          type = "stdio";
+          command = "${pkgs.writeShellScript "run-memory-server" ''
+            export PATH="${pkgs.nodejs}/bin:$PATH"
+            exec npx -y @modelcontextprotocol/server-memory
+          ''}";
+          env.MEMORY_FILE_PATH = "${homeDirectory}/.llm-memory.json";
+        };
       };
 
       settings = {
+        env.DISABLE_TELEMETRY = "1";
         theme = "dark";
-
+        cleanupPeriodDays = 7;
         includeCoAuthoredBy = false;
 
         permissions = {
+          defaultMode = "plan";
           deny = [
             "Read(./.env*)"
             "Read(${homeDirectory}/.ssh/*)"
@@ -31,8 +43,6 @@ in
         };
       };
     };
-
-    home.sessionVariables.DISABLE_TELEMETRY = 1;
 
     programs.git.ignores = [
       ".claude/"
