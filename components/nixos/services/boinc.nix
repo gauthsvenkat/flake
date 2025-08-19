@@ -6,6 +6,7 @@
     group = "boinc";
   };
 
+  # NOTE : Still needed to manually run boinccmd for boinc to attach to project :/
   services.boinc = {
     enable = true;
     package = pkgs.boinc-headless;
