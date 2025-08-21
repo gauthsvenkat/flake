@@ -74,5 +74,23 @@ in
       ''}";
       description = "screen recorder";
     };
+
+    terminal = mkOption {
+      type = types.str;
+      default = getExe pkgs.wezterm;
+      description = "terminal emulator";
+    };
+
+    fileManager = mkOption {
+      type = types.str;
+      default = getExe' pkgs.kdePackages.dolphin "dolphin";
+      description = "file manager";
+    };
+
+    browser = mkOption {
+      type = types.str;
+      default = getExe pkgs.firefox;
+      description = "web browser";
+    };
   };
 }
