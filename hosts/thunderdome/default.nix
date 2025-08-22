@@ -9,11 +9,10 @@ let
 in
 {
   imports = [
-    ../../bases/nixos/desktop-environment/kde.nix
+    ../../bases/nixos/desktop-environment/hyprland.nix
 
     ../../bases/nixos/flavor/personal.nix
 
-    ../../components/nixos/extra/autologin.nix
     ../../components/nixos/extra/gaming.nix
 
     ../../components/nixos/hardware/nvidia.nix
