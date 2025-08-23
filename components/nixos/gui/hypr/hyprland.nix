@@ -11,7 +11,6 @@ let
     lockScreen
     playerctl
     screenshot
-    statusBar
     wezterm
     ;
 in
@@ -108,10 +107,6 @@ in
             force_default_wallpaper = 0;
             disable_hyprland_logo = true;
           };
-
-          exec-once = [
-            "pidof ${statusBar} || ${statusBar}"
-          ];
 
           input = {
             kb_layout = "us";
