@@ -23,6 +23,10 @@ in
     wayland.windowManager.hyprland = {
       enable = true;
 
+      #NOTE : Following is set in the NixOS module.
+      package = null;
+      portalPackage = null;
+
       settings =
         let
           dropDownTerm = "dropdown-terminal";
