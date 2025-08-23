@@ -8,8 +8,6 @@
     ../../../components/nixos/gui/hypr/hyprpaper.nix
     ../../../components/nixos/gui/hypr/tofi.nix
 
-    ../../../components/nixos/gui/hypr/variables.nix
-
     ../workstation.nix
   ];
 }
