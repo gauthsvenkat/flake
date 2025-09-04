@@ -17,8 +17,8 @@ update input="":
 upgrade:
     just update
     git add flake.lock
-    git commit -m "system upgrade {{ datetime('%Y-%m-%d') }}"
     just apply boot
+    git commit -m "upgrade: on {{ datetime('%Y-%m-%d') }}"
 
 secrets-edit:
     sops edit secrets.yaml
