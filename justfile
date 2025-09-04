@@ -17,7 +17,7 @@ update input="":
 upgrade:
     just update
     git add flake.lock
-    just apply boot
+    just apply boot || (git checkout HEAD -- flake.lock && exit 1)
     git commit -m "upgrade: on {{ datetime('%Y-%m-%d') }}"
 
 secrets-edit:
