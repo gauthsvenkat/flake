@@ -4,6 +4,7 @@
     "${inputs.nixpkgs-nixos}/nixos/modules/installer/sd-card/sd-image-aarch64.nix"
 
     ../../bases/nixos/flavor/server.nix
+    ../../modules/nixos/services/immich.nix
   ];
 
   # NOTE: Disabling the default boot options in favor of raspberry pi
