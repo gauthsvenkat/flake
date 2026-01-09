@@ -7,7 +7,8 @@
   # the following to make non-nix programs work as well.
   environment.variables.SSL_CERT_FILE = "${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt";
 
-  time.timeZone = "Europe/Amsterdam";
+  # time.timeZone = "Europe/Amsterdam";
+  time.timeZone = "Asia/Kolkata";
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
