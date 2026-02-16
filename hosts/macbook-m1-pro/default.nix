@@ -26,6 +26,7 @@ in
   home-manager.users.${username} = {
     home.packages = with pkgs; [
       glab
+      go-task
       hurl
       k9s
       kubernetes-helm
