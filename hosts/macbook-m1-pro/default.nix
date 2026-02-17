@@ -35,6 +35,7 @@ in
       kubernetes-helm
       # NOTE: Needed to build psycopg2 from source for core-api
       libpq.pg_config
+      nodejs
       vault
 
       (google-cloud-sdk.withExtraComponents [
