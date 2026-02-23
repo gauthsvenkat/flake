@@ -18,6 +18,7 @@ in
       "1password-cli"
       "claude"
       "notion"
+      "pgadmin4"
       "slack"
       "thunderbird"
     ];
